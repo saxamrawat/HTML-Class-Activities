@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <script>
+        function nameLengthValid() {
+            
+            let x = document.getElementById("fname").value;
+            let len = x.length;
+            let text;
+            if (len < 4 || len > 10) {
+                text = "Enter a name with alleast 4 letter and atmost 10 letters.";
+            } else {
+                text = "Input OK";
+            }
+            document.getElementById("output").innerHTML = text;
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Name: <input id="fname">
+        <button type="button" onclick="nameLengthValid()">Submit</button>
+    </form>
+    <p id="output"></p>
+    
+</body>
+
+</html>
